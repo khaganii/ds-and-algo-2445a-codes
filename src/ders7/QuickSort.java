@@ -1,4 +1,0 @@
-package ders7;
-
-public class QuickSort {
-}
