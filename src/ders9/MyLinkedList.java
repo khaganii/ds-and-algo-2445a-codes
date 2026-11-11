@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.NoSuchElementException;
 
 public class MyLinkedList<T> implements List<Integer> {
 
@@ -109,8 +110,19 @@ public class MyLinkedList<T> implements List<Integer> {
 
     if(this.head.value == target) {
       this.head = head.next;
+    }else{
+      Node cur = head;
+      while (cur.next != null && cur.next.value != target) {
+        cur = cur.next;
+      }
+
+      if(cur.next != null) {
+        cur.next = cur.next.next;
+      }else
+        throw new NoSuchElementException("element tapilmadi");
     }
-    return false;
+
+    return true;
   }
 
   @Override

@@ -10,7 +10,7 @@ public class Main {
 
     System.out.println(myList);
     System.out.println(myList.size());
-    System.out.println(myList.remove(Integer.valueOf(5)));
+    System.out.println(myList.remove(Integer.valueOf(15)));
     System.out.println(myList);
 
 
